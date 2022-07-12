@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logo.jpg">
+    <title>Елманов Андрей</title>
+</head>
+
+<body>
+    <div class="content">
+
+        <!-- Информация о кантидате -->
+
+        <img src="img/11361808_640x640.avif" alt="logo" class="logo">
+        <div class="info">
+            <a class="head_text" style="color:grey">Задание выполнил</a>
+            <h2>Елманов<br>Андрей Дмитриевич</h2>
+            <p>В мае окончил курсы профессиональной переподготовки СберУниверситет. Изучил основы HTML, CSS, JavaScript,
+                React, Webpack. Есть опыт работы с WordPress и ModX. Сейчас работаю в продажах. Хочу стать
+                Frontend-программистом.</p>
+            <h4>+7 (995) 066-62-82</h4>
+            <a class="link" href="https://t.me/aelmanov" target="_blank">
+                <img src="img/social.PNG" width="60px">
+                <span>Telegram</span>
+            </a>
+        </div>
+
+        <!-- Задания -->
+
+        <div class="tasks_all">
+
+            <!-- И-майл -->
+
+            <div class="task">
+                <div class="box">
+                    <label for="email" class="label interactive">E-mail</label>
+                    <input class="email" id="email" placeholder="E-mail">
+                    <a class="caption invalid" style="color:red">E-mail введен неверно</a>
+                </div>
+                <div class="box">
+                    <a class="caption">Ховер</a>
+                    <input class="email_hover" id="email_hover" placeholder="E-mail">
+                </div>
+                <div class="box">
+                    <a class="caption">Ввод</a>
+                    <label for="email_active" class="label">E-mail</label>
+                    <input class="email_active" id="email_active" placeholder="office@make.st">
+                </div>
+                <div class="box">
+                    <a class="caption">Ошибка</a>
+                    <label for="email_err" class="label" style="color:red">E-mail</label>
+                    <input class="email_err" id="email_err" placeholder="officemake.st">
+                    <a class="caption" style="color:red">Текст ошибки</a>
+                </div>
+            </div>
+
+            <!-- Ниспадающее меню -->
+
+            <div class="task">
+                <div class="task_menu">
+                    <div class="box_menu">
+                        <label for="menu" class="label_menu" id="label_menu_active">Выберите что-нибудь</label>
+                        <div class="menu" id="menu">Выберите что-нибудь</div>
+                        <div class="dropdown">
+                            <li class="option" value="Первый стул">Первый стул</li>
+                            <li class="option" value="Второй стул">Второй стул</li>
+                            <li class="option" value="Выбранный пункт">Выбранный пункт</li>
+                            <li class="option" value="Теорема Эскобара">Теорема Эскобара</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="task_menu">
+                    <div class="box_menu_hover">
+                        <div class="menu_hover">Выберите что-нибудь</div>
+                    </div>
+                </div>
+                <div class="task_menu">
+                    <div class="box_menu_active">
+                        <label for="menu" class="label_menu_active">Выберите что-нибудь</label>
+                        <div class="menu_active" id="menu">Выбранный пункт</div>
+                        <div class="dropdown_active">
+                            <li class="option_active" value="Первый стул">Первый стул</li>
+                            <li class="option_active">Второй стул</li>
+                            <li class="option_active" style="color:blue">Выбранный пункт</li>
+                            <li class="option_active" style="background:blue; color:white">Теорема Эскобара</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кнопки -->
+
+            <div class="task">
+                <div class="box">
+                    <button class="btn">Отправить</button>
+                </div>
+                <div class="box">
+                    <a class="caption">Ховер</a>
+                    <button class="btn_hover">Отправить</button>
+                </div>
+                <div class="box">
+                    <a class="caption">Нажатие</a>
+                    <button class="btn_active">Отправить</button>
+                </div>
+                <div class="box">
+                    <a class="caption">Неактивна</a>
+                    <button class="btn_notActive">Отправить</button>
+                </div>
+            </div>
+
+            <!-- Чекбоксы -->
+
+            <div class="buttons">
+                <div class="checkbox">
+                    <div class="checkbox_btn">
+                        <input id="checkbox_btn" type="checkbox">
+                        <label for="checkbox_btn">Выбери меня</label>
+                    </div>
+                    <div class="checkbox_btn_hover">
+                        <input id="checkbox_btn_hover" type="checkbox">
+                        <label for="checkbox_btn_hover">Выбери меня</label>
+                    </div>
+                    <div class="checkbox_btn_checked">
+                        <input id="checkbox_btn_checked" type="checkbox" checked>
+                        <label for="checkbox_btn_checked">Птица счаться завтрашнего дня</label>
+                    </div>
+                </div>
+
+                <!-- Радио -->
+
+                <div class="radio">
+                    <div class="radio_btn">
+                        <input id="radio_btn" type="radio">
+                        <label for="radio_btn">Пластмассовый мир победил</label>
+                    </div>
+                    <div class="radio_btn_hover">
+                        <input id="radio_btn_hover" type="radio">
+                        <label for="radio_btn_hover">Макет оказался сильней</label>
+                    </div>
+                    <div class="radio_btn_checked">
+                        <input id="radio_btn_checked" type="radio" checked>
+                        <label for="radio_btn_checked">Последний кораблик остыл</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Аккордеон -->
+
+            <div class="task_accordion">
+                <div class="accordion">
+                    <div class="container">
+                        <div class="accordion_item">
+                            <p><b>Аккордеон</b></p>
+                        </div>
+                        <div class="accordion_text">
+                            <a>Гордость полными вагонами золотыми погонами<br>
+                                С юга дуют, молодые вет...<br>
+                                Разрывая в клочья облака не забыли шлют издалека<br>
+                                С дома мама И не последняя любовь<br>
+                                А по небу бегут видишь чьи-то следы<br>
+                                Это может быть ты это может быть я<br>
+                                Это может наш друг<br>
+                                Это может нам поют свои</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion_hover">
+                    <div class="container">
+                        <div class="accordion_item_hover">
+                            <p><b>Аккордеон</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion_active">
+                    <div class="container">
+                        <div class="accordion_item_active">
+                            <p><b>Аккордеон</b></p>
+                        </div>
+                        <div class="accordion_text_active">
+                            <p>Гордость полными вагонами золотыми погонами<br>
+                                С юга дуют, молодые вет...<br>
+                                Разрывая в клочья облака не забыли шлют издалека<br>
+                                С дома мама И не последняя любовь<br>
+                                А по небу бегут видишь чьи-то следы<br>
+                                Это может быть ты это может быть я<br>
+                                Это может наш друг<br>
+                                Это может нам поют свои</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="text/javascript" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,814 @@
+/* Подключение шрифтов */
+
+@font-face {
+    font-family: Bold;
+    src: url(fonts/GraphikLCG-Bold.otf);
+}
+
+@font-face {
+    font-family: Medium;
+    src: url(fonts/GraphikLCG-Medium.otf);
+}
+
+@font-face {
+    font-family: Regular;
+    src: url(fonts/GraphikLCG-Regular.otf);
+}
+
+/* -----------------Сетка экрана---------------- */
+
+body {
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(60px, 80px));
+    gap: 32px;
+}
+
+/* -------Настройка шрифта для заголовков------- */
+
+h2 {
+    font-family: Bold;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+h4 {
+    font-family: Medium;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+a {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+p {
+    font-family: Regular;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* ----------------Стили контента--------------- */
+
+.content {
+    grid-column: 1 / 9;
+    background-color: white;
+    padding: 10px;
+}
+
+.info {
+    width: 50%;
+    padding-left: 15%;
+    padding-top: 30px;
+}
+
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    width: 40px;
+}
+
+.link {
+    font-family: Medium;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding-left: 0px;
+    width: fit-content;
+}
+
+.tasks_all {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.label {
+    margin-left: 16px;
+    margin-bottom: -15px;
+    color: gray;
+    font-size: 12px;
+}
+
+.caption {
+    margin-left: 16px;
+    color: grey;
+}
+
+.task {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+    height: 110px;
+}
+
+/* ----------------------Имайл------------------- */
+
+.email {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    outline: none;
+    border: none;
+    border-bottom: solid 2px gray;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.email:hover {
+    outline: none;
+    border: none;
+    border-bottom: solid 2px blue;
+}
+
+.interactive {
+    display: none;
+}
+
+.invalid {
+    display: none;
+}
+
+/* Имайл ховер */
+
+.email_hover {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    outline: none;
+    border: none;
+    border-bottom: solid 2px blue;
+    cursor: pointer;
+    margin: 15px;
+}
+
+/* Имайл актив */
+
+.email_active {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    outline: none;
+    border: none;
+    border-bottom: solid 4px blue;
+    cursor: pointer;
+    margin: 15px;
+}
+
+/* Имайл ошибка */
+
+.email_err {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    outline: none;
+    border: none;
+    border-bottom: solid 2px gray;
+    cursor: pointer;
+    margin: 15px;
+}
+
+/* ---------------Ниспадающее меню-------------- */
+
+.task_menu {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
+
+.box_menu {
+    position: relative;
+    margin: 15px;
+}
+
+.label_menu {
+    color: gray;
+    font-size: 12px;
+}
+
+#label_menu_active {
+    display: none;
+}
+
+.menu {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    position: relative;
+    cursor: pointer;
+    border-bottom: solid 2px grey;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.menu:hover {
+    color: black;
+    border-bottom: solid 2px blue;
+}
+
+.menu::before {
+    content: "\2304";
+    color: blue;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.dropdown {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    display: none;
+    width: 100%;
+}
+
+.task_menu .active .dropdown {
+    display: block;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.task_menu .active .menu::before {
+    content: "\2303";
+    color: blue;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.task_menu .active .menu {
+    color: black;
+    border-bottom: solid 2px blue;
+}
+
+.option {
+    list-style-type: none;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Ниспадающее меню ховер */
+
+.box_menu_hover {
+    position: relative;
+    margin: 15px;
+}
+
+.menu_hover {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    position: relative;
+    cursor: pointer;
+    border-bottom: solid 2px blue;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.menu_hover::before {
+    content: "\2304";
+    color: blue;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+/* Ниспадающее меню актив */
+
+.box_menu_active {
+    position: relative;
+    margin: 15px;
+}
+
+.label_menu_active {
+    color: gray;
+    font-size: 12px;
+}
+
+.menu_active {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    width: 100%;
+    border-bottom: solid 2px blue;
+}
+
+.menu_active::before {
+    content: "\2304";
+    color: blue;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.dropdown_active {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    width: 100%;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.option_active {
+    list-style-type: none;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+/* -----------Кнопки, чекбоксы и радио-------- */
+
+/* Кнопка */
+
+.btn {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 15px;
+    background-image: linear-gradient(75deg, rgb(252, 70, 107) 0%, rgb(63, 94, 251) 100%);
+    border: none;
+    margin: 15px;
+}
+
+.btn:hover {
+    background-image: linear-gradient(75deg, rgb(63, 94, 251) 0%, rgb(252, 70, 107) 100%);
+}
+
+.btn:active {
+    background-image: linear-gradient(55deg, rgb(63, 94, 251) 60%, rgb(252, 70, 107) 100%);
+}
+
+/* Кнопка ховер */
+
+.btn_hover {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 15px;
+    background-image: linear-gradient(75deg, rgb(63, 94, 251) 0%, rgb(252, 70, 107) 100%);
+    border: none;
+    margin: 15px;
+}
+
+/* Кнопка активная */
+
+.btn_active {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 15px;
+    background-image: linear-gradient(55deg, rgb(63, 94, 251) 60%, rgb(252, 70, 107) 100%);
+    border: none;
+    margin: 15px;
+}
+
+/* Кнопка не активная */
+
+.btn_notActive {
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+    border-radius: 50px;
+    padding: 15px;
+    background-color: grey;
+    border: none;
+    margin: 15px;
+}
+
+/* --------------Чекбоксы и радио------------- */
+
+.buttons {
+    font-family: Regular;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 15px;
+}
+
+.checkbox,
+.radio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+/* Кнопка чекбокс интерактивная */
+
+.checkbox_btn {
+    cursor: pointer;
+}
+
+.checkbox_btn label {
+    cursor: pointer;
+    color: grey;
+}
+
+.checkbox_btn:hover label {
+    color: black;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox_btn label:before {
+    content: " ";
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    background: white;
+    border: 2px solid grey;
+    vertical-align: middle;
+}
+
+input[id=checkbox_btn]:checked+label {
+    color: black;
+}
+
+input[id=checkbox_btn]:hover+label::before {
+    border: 2px solid blue;
+}
+
+input[id=checkbox_btn]:checked+label::before {
+    content: "\2713";
+    border: 2px solid blue;
+    color: white;
+    background: blue;
+}
+
+/* Кнопка чекбокс ховер */
+
+.checkbox_btn_hover label {
+    cursor: pointer;
+}
+
+.checkbox_btn_hover label:before {
+    content: " ";
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    background: white;
+    border: 2px solid blue;
+    vertical-align: middle;
+}
+
+/* Кнопка чекбокс нажата */
+
+.checkbox_btn_checked label {
+    cursor: pointer;
+}
+
+.checkbox_btn_checked label:before {
+    content: "\2713";
+    color: white;
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    background: blue;
+    border: 2px solid blue;
+    vertical-align: middle;
+}
+
+/* Кнопка радио интерактивная */
+
+.radio_btn {
+    cursor: pointer;
+}
+
+.radio_btn label {
+    cursor: pointer;
+    color: grey;
+}
+
+.radio_btn:hover label {
+    color: black;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.radio_btn label:before {
+    content: " ";
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid grey;
+    vertical-align: middle;
+}
+
+input[id=radio_btn]:checked+label {
+    color: black;
+}
+
+input[id=radio_btn]:hover+label::before {
+    border: 2px solid blue;
+}
+
+input[id=radio_btn]:checked+label::before {
+    content: "\2022";
+    font-size: 45px;
+    color: blue;
+    border: 2px solid blue;
+}
+
+/* Кнопка радио ховер */
+
+.radio_btn_hover label {
+    cursor: pointer;
+}
+
+input[id=radio_btn_hover]+label::before {
+    content: " ";
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid blue;
+    vertical-align: middle;
+}
+
+/* Кнопка радио нажата */
+
+.radio_btn_checked label {
+    cursor: pointer;
+}
+
+input[id=radio_btn_checked]+label::before {
+    content: "\2022";
+    font-size: 45px;
+    color: blue;
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid blue;
+    vertical-align: middle;
+}
+
+/* ---------------Аккордеон------------- */
+
+.task_accordion {
+    width: 100%;
+}
+
+.accordion {
+    position: relative;
+    margin: 15px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.accordion_item {
+    position: relative;
+    padding: 10px 0;
+    color: grey;
+    cursor: pointer;
+    border-bottom: solid 2px grey;
+}
+
+.accordion_item:hover {
+    color: black;
+    border-bottom: solid 2px blue;
+}
+
+.accordion_item::before {
+    content: "\2304";
+    color: blue;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.accordion_text {
+    opacity: 0;
+    height: 0px;
+    transition: .3s ease-out;
+}
+
+.accordion .active .accordion_text {
+    border-bottom: solid 2px blue;
+    padding-bottom: 24px;
+    opacity: 1;
+    height: fit-content;
+}
+
+.accordion .active .accordion_item::before {
+    content: "\2303";
+    color: blue;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.accordion .active .accordion_item {
+    color: black;
+    border-bottom: none;
+}
+
+/* Аккордеон Ховер */
+
+.accordion_hover {
+    position: relative;
+    margin: 15px;
+}
+
+.accordion_item_hover {
+    position: relative;
+    padding: 10px 0;
+    border-bottom: solid 2px blue;
+    cursor: pointer;
+}
+
+.accordion_item_hover::before {
+    content: "\2304";
+    color: blue;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+/* Аккордеон Актив */
+
+.accordion_active {
+    position: relative;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.accordion_item_active {
+    position: relative;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.accordion_item_active::before {
+    content: "\2303";
+    color: blue;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.accordion_text_active {
+    border-bottom: solid 2px blue;
+}
+
+/* --------Адаптиция под разлиные размеры экрана-------- */
+
+@media (max-width: 736px) {
+    body {
+        grid-template-columns: repeat(12, minmax(60px, 80px));
+    }
+
+    .content {
+        grid-column: 1 / 9;
+    }
+}
+
+@media (max-width: 1072px) {
+    body {
+        grid-template-columns: repeat(8, minmax(56px, 88px));
+    }
+
+    .content {
+        grid-column: 1 / 6;
+    }
+
+    .task {
+        grid-template-columns: repeat(2, 200px);
+    }
+
+    .buttons {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .logo {
+        top: 40px;
+        left: 30px;
+        width: 40px;
+    }
+
+    .info {
+        width: 80%;
+    }
+}
+
+@media (max-width: 424px) {
+    body {
+        grid-template-columns: repeat(4, minmax(56px, 88px));
+        gap: 24px;
+    }
+
+    .content {
+        grid-column: 1 / 4;
+    }
+
+    .task {
+        grid-template-columns: repeat(1, 200px);
+    }
+
+    h2 {
+        font-family: Bold;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .info {
+        width: 90%;
+        padding-left: 0;
+    }
+
+    .logo {
+        left: 15px;
+        width: 40px;
+    }
+
+    .head_text {
+        padding-left: 50px;
+        white-space: nowrap;
+    }
+}
